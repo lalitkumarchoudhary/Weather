@@ -63,6 +63,7 @@ class HomeViewController: UIViewController {
         annotation.title = data.name
         annotation.subtitle = "\(data.main.temp) °C"
         mapView.addAnnotation(annotation)
+        //It will keep adding annotation - When every time this methoda calls - Have to remove previous annotation before adding new one
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(coordinate,
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
