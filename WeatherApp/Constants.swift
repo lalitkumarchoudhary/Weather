@@ -16,3 +16,7 @@ struct StringConstants {
 struct Constants {
     static let MAP_RADIUS: Double = 5000 //in meter
 }
+
+struct KeyConstants {
+    static let LAST_LOCATION_USER_DEFAULT_KEY = "lastLocationUserDefaultKey"
+}
