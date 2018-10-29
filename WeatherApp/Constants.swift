@@ -8,6 +8,11 @@
 
 import UIKit
 
-class Constants: NSObject {
+struct StringConstants {
+    static let LOCATION_PERMISSION_TITLE = "Location Permission Required"
+    static let LOCATION_PERMISSION_DETAIL_MESSAGE = "WeatherApp does not have access to your location. To enable access, tap Settings > Location"
+}
 
+struct Constants {
+    static let MAP_RADIUS: Double = 5000 //in meter
 }

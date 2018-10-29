@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A776D8218789F100ADAB00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A776D7218789F100ADAB00 /* Extensions.swift */; };
 		41E0819121873B3000B634CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0819021873B3000B634CE /* AppDelegate.swift */; };
 		41E0819321873B3000B634CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0819221873B3000B634CE /* HomeViewController.swift */; };
 		41E0819621873B3000B634CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E0819421873B3000B634CE /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A776D7218789F100ADAB00 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		41E0818D21873B3000B634CE /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E0819021873B3000B634CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41E0819221873B3000B634CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				41E0819021873B3000B634CE /* AppDelegate.swift */,
 				41E0819221873B3000B634CE /* HomeViewController.swift */,
+				41A776D7218789F100ADAB00 /* Extensions.swift */,
 				41E081A221873DF100B634CE /* WeatherData.swift */,
 				41E081A621873E7C00B634CE /* Constants.swift */,
 				41E081A421873E0C00B634CE /* NetworkManager.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41E081A721873E7C00B634CE /* Constants.swift in Sources */,
+				41A776D8218789F100ADAB00 /* Extensions.swift in Sources */,
 				41E081A521873E0C00B634CE /* NetworkManager.swift in Sources */,
 				41E0819321873B3000B634CE /* HomeViewController.swift in Sources */,
 				41E081A321873DF100B634CE /* WeatherData.swift in Sources */,

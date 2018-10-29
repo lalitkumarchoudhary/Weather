@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Must not be shared in public depository
 let OPEN_WEATHER_API_KEY = "03196249b236c1cfaffe92f7cfa4a592"
 
 class NetworkManager: NSObject {

@@ -14,14 +14,20 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var locManager: CLLocationManager!
-    var currentLocation: CLLocationCoordinate2D?
-    let regionRadius: CLLocationDistance = 50000
-    var weatherData: WeatherData?
+    let regionRadius: CLLocationDistance = Constants.MAP_RADIUS
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        setupView()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func setupView() {
         locManager = CLLocationManager()
         locManager.delegate = self
         mapView.delegate = self
@@ -30,11 +36,6 @@ class HomeViewController: UIViewController {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(locationSelected))
         tapRecognizer.numberOfTapsRequired = 2
         mapView.addGestureRecognizer(tapRecognizer)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @objc func locationSelected(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -87,17 +88,15 @@ extension HomeViewController: CLLocationManagerDelegate {
             break
         case .restricted:
             // If restricted by e.g. parental controls. User can't enable Location Services
-            break
+            showAlertController(withTitle: StringConstants.LOCATION_PERMISSION_TITLE, message: StringConstants.LOCATION_PERMISSION_DETAIL_MESSAGE)
         case .denied:
             // If user denied your app access to Location Services, but can grant access from Settings.app
-            break
+            showAlertController(withTitle: StringConstants.LOCATION_PERMISSION_TITLE, message: StringConstants.LOCATION_PERMISSION_DETAIL_MESSAGE)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        currentLocation = locValue
         fetchWeatherData(forCoordinates: locValue)
     }
 }
