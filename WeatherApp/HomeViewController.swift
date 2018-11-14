@@ -36,6 +36,9 @@ class HomeViewController: UIViewController {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(locationSelected))
         tapRecognizer.numberOfTapsRequired = 2
         mapView.addGestureRecognizer(tapRecognizer)
+//        if let data = UserDefaults.standard.data(forKey: KeyConstants.LAST_LOCATION_USER_DEFAULT_KEY) as? WeatherData {
+//            refreshView(withWeatherData: data)
+//        }
     }
     
     @objc func locationSelected(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -50,6 +53,7 @@ class HomeViewController: UIViewController {
         NetworkManager.getWeatherData(lat: coordinate.latitude, lon: coordinate.longitude, completion: { [weak self] data in
             if let strongSelf = self {
                 DispatchQueue.main.async {
+                    //UserDefaults.standard.set(data, forKey: KeyConstants.LAST_LOCATION_USER_DEFAULT_KEY)
                     strongSelf.refreshView(withWeatherData: data)
                 }
             }
