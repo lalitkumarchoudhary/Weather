@@ -16,6 +16,7 @@
 		41E081A321873DF100B634CE /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E081A221873DF100B634CE /* WeatherData.swift */; };
 		41E081A521873E0C00B634CE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E081A421873E0C00B634CE /* NetworkManager.swift */; };
 		41E081A721873E7C00B634CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E081A621873E7C00B634CE /* Constants.swift */; };
+		41F0A5DB21A424FF00469AA0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 41F0A5DA21A424FF00469AA0 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		41E081A221873DF100B634CE /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		41E081A421873E0C00B634CE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		41E081A621873E7C00B634CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41F0A5DA21A424FF00469AA0 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				41E081A221873DF100B634CE /* WeatherData.swift */,
 				41E081A621873E7C00B634CE /* Constants.swift */,
 				41E081A421873E0C00B634CE /* NetworkManager.swift */,
+				41F0A5DA21A424FF00469AA0 /* .travis.yml */,
 				41E0819421873B3000B634CE /* Main.storyboard */,
 				41E0819721873B3200B634CE /* Assets.xcassets */,
 				41E0819921873B3200B634CE /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			files = (
 				41E0819B21873B3200B634CE /* LaunchScreen.storyboard in Resources */,
 				41E0819821873B3200B634CE /* Assets.xcassets in Resources */,
+				41F0A5DB21A424FF00469AA0 /* .travis.yml in Resources */,
 				41E0819621873B3000B634CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
